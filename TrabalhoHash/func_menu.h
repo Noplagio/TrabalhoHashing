@@ -6,6 +6,19 @@
 
 using namespace std;//para usar a std
 
+void ler_busca_codigo(){
+    cout<< "\nInforme o codigo da pessoa a ser procurada: "<<endl;
+}
+
+void ler_remove_pessoa(){
+    cout<< "\nInforme o codigo da pessoa a ser apagada: "<<endl;
+}
+
+void ler_insere_pessoa(){
+    cout<< "\nInforme o codigo da pessoa e tecle enter: "<<endl;
+    cout<< "informe o nome da pessoa e tecle enter: "<<endl;
+}
+
 int menu_principal(){
 
     int op = -1;
