@@ -5,15 +5,18 @@ using namespace std;
 class pessoa{
     private:
         int codigo;
+        int idade;
         string nome;
 
     public:
         pessoa();
         ~pessoa();
-        pessoa(int codigo, string nome);
+        pessoa(int codigo, int idade, string nome);
         void set_codigo(int codigo);
+        void set_idade(int idade);
         void set_nome(string nome);
         int get_codigo();
+        int get_idade();
         string get_nome();
         void imprimir_pessoa();
 };
@@ -24,14 +27,20 @@ pessoa::pessoa(){
 }
 
 //contrutor
-pessoa::pessoa(int codigo, string nome){
+pessoa::pessoa(int codigo, int idade, string nome){
     this->codigo = codigo;
+    this->idade = idade;
     this->nome = nome;
 }
 
 //destrutor
 pessoa::~pessoa(){
 
+}
+
+//seta valor para idade da pessoa
+void pessoa::set_idade(int idade){
+    this->idade = idade;
 }
 
 //seta valor para codigo de pessoa
@@ -49,6 +58,11 @@ int pessoa::get_codigo(){
     return this->codigo;
 }
 
+//retorna idade da pessoa
+int pessoa::get_idade(){
+    return this->idade;
+}
+
 //retorno nome da pessoa
 string pessoa::get_nome(){
     return this->nome;
@@ -56,5 +70,6 @@ string pessoa::get_nome(){
 
 //imprime tabela hash pesso por pessoa
 void pessoa::imprimir_pessoa(){
-
+    cout<<"\n";
+    cout<<"\tcodigo:\t"<<codigo<<"\tIdade:\t"<<idade<<"\tNome:\t"<<nome;
 }

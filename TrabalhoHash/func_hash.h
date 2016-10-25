@@ -7,7 +7,7 @@ using namespace std;
 
 class hash{
     private:
-        list<pessoa>plist[TAM];
+        list<pessoa>lista[TAM];
     public:
         hash();
         ~hash();
@@ -26,7 +26,9 @@ hash::hash(){
 
 //destrutor
 hash::~hash(){
-
+    for(int i=0; i < TAM; i++){
+        lista[i].clear();
+    }
 }
 
 //realiza calculo para saber onde inserir on hash
@@ -38,6 +40,7 @@ int hash::calcular_indice_hash(int codigo){
 //insere pessoa no hash
 void hash::insere_pessoa_hash(pessoa p){
     int indice = calcular_indice_hash(p.get_codigo());
+    lista[indice].push_back(p);
 }
 
 //remove pessoa do hash
@@ -53,5 +56,11 @@ void hash::consulta_hash(){
 //exibi no termial oque temos no hash
 void hash::imprimi_hash(){
 
+    list<pessoa>::iterator it;
+    for(int i=0;i<TAM;i++){
+        for(it=lista[i].begin();it!=lista[i].end();it++){
+            it->imprimir_pessoa();
+        }
+    }
 }
 

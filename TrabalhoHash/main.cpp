@@ -17,6 +17,10 @@
 pessoa p;
 hash h;
 
+void listar_hash(){
+    h.imprimi_hash();
+}
+
 void buscar_codigo(){
     int codigo;
 
@@ -36,15 +40,19 @@ void remover_pessoa(){
 
 void insere_pessoa(){
     string nome;
+    int idade;
     int codigo;
 
     ler_insere_pessoa();
     cout <<"\n>>";
     cin >> codigo;
-    cout <<">>";
+    cout <<"\n>>";
+    cin >> idade;
+    cout <<"\n>>";
     cin >> nome;
 
     p.set_codigo(codigo);
+    p.set_idade(idade);
     p.set_nome(nome);
     h.insere_pessoa_hash(p);
 }
@@ -68,6 +76,10 @@ void insere_pessoa(){
                     break;
                 case 3:
                     buscar_codigo();
+                    op = menu_principal();
+                    break;
+                case 4:
+                    listar_hash();
                     op = menu_principal();
                     break;
                 default :
