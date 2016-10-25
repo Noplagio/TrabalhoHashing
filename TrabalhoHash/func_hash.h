@@ -1,7 +1,7 @@
 #include <iostream>
 #include <list>
 
-#define TAM 5
+#define TAM 4
 
 using namespace std;
 
@@ -11,8 +11,8 @@ class hash{
     public:
         hash();
         ~hash();
-        int calcular_indice_hash();
-        void insere_pessoa_hash();
+        int calcular_indice_hash(int codigo);
+        void insere_pessoa_hash(pessoa p);
         void remove_pessoa_hash();
         void consulta_hash();
         void imprimi_hash();
@@ -29,9 +29,15 @@ hash::~hash(){
 
 }
 
-//insere pessoa no hash
-void hash::insere_pessoa_hash(){
+//realiza calculo para saber onde inserir on hash
+int hash::calcular_indice_hash(int codigo){
+    int indice = codigo % TAM;
+    return indice;
+}
 
+//insere pessoa no hash
+void hash::insere_pessoa_hash(pessoa p){
+    int indice = calcular_indice_hash(p.get_codigo());
 }
 
 //remove pessoa do hash
@@ -49,7 +55,3 @@ void hash::imprimi_hash(){
 
 }
 
-//calcula e retorna o indice do hash
-int hash::calcular_indice_hash(){
-
-}

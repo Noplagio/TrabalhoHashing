@@ -43,6 +43,10 @@ void insere_pessoa(){
     cin >> codigo;
     cout <<">>";
     cin >> nome;
+
+    p.set_codigo(codigo);
+    p.set_nome(nome);
+    h.insere_pessoa_hash(p);
 }
 
 
