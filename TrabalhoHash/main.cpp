@@ -13,6 +13,9 @@
 #include "func_pessoa.h"
 #include "func_hash.h"
 
+//variaveis globais para acesso as outras classes
+pessoa p;
+hash h;
 
 void buscar_codigo(){
     int codigo;

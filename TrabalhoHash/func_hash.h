@@ -19,7 +19,7 @@ class hash{
 };
 
 
-//contrutor
+//reconstrutor
 hash::hash(){
 
 }
