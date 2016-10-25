@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1474309251 source:/home/victor/Área de Trabalho/Exercicio_hashing_arquivo (Eduardo, Marlon, Victor)/Atividade-hashing-arquivo/main.cpp
+	<iostream>
+	"func_leitura.h"
+
+1474309460 /home/victor/Área de Trabalho/Exercicio_hashing_arquivo (Eduardo, Marlon, Victor)/Atividade-hashing-arquivo/func_leitura.h
+	<iostream>
+	"func_hash.h"
+	<string>
+
+1474306570 /home/victor/Área de Trabalho/Exercicio_hashing_arquivo (Eduardo, Marlon, Victor)/Atividade-hashing-arquivo/func_hash.h
+	<string>
+	<list>
+	<iostream>
+	"arquivo.h"
+
+1474310355 /home/victor/Área de Trabalho/Exercicio_hashing_arquivo (Eduardo, Marlon, Victor)/Atividade-hashing-arquivo/arquivo.h
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+	<list>
+	"func_pessoa.h"
+
+1474301608 /home/victor/Área de Trabalho/Exercicio_hashing_arquivo (Eduardo, Marlon, Victor)/Atividade-hashing-arquivo/func_pessoa.h
+	<string>
+	<iostream>
+
