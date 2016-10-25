@@ -12,6 +12,7 @@
 #include "func_menu.h"
 #include "func_pessoa.h"
 #include "func_hash.h"
+#include "func_arquivo.h"
 
 //variaveis globais para acesso as outras classes
 pessoa p;
