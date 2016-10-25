@@ -10,6 +10,9 @@
 
 #include <iostream>
 #include "func_menu.h"
+#include "func_pessoa.h"
+#include "func_hash.h"
+
 
 void buscar_codigo(){
     int codigo;
