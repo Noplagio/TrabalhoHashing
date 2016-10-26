@@ -23,6 +23,11 @@ class func_arquivo{
 //funçaõ que convertte int em string para nomear txt
 string func_arquivo::converte_string(int valor){
 
+    string convertido;
+    stringstream converter;
+    converter << valor;
+    convertido = converter.str();
+    return convertido;
 }
 
 //construtor
@@ -34,7 +39,7 @@ func_arquivo::func_arquivo(){
 
         string nome = converte_string(i);
 
-        arquivo.open(nome, ios::trunc);
+        arquivo.open("teste", ios::trunc);
         arquivo.close();
     }
 }

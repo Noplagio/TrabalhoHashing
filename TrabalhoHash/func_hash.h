@@ -13,8 +13,8 @@ class hash{
         ~hash();
         int calcular_indice_hash(int codigo);
         void insere_pessoa_hash(pessoa p);
-        void remove_pessoa_hash();
-        void consulta_hash();
+        void remove_pessoa_hash(int codigo);
+        void consulta_hash(int codigo, int indice);
         void imprimi_hash();
 };
 
@@ -44,25 +44,27 @@ void hash::insere_pessoa_hash(pessoa p){
 }
 
 //remove pessoa do hash
-void hash::remove_pessoa_hash(int codigo, int indice){
-    for(int i = lista[indice].begin; i < lista[indice].end; i++ ){
-        if(i = codigo){
+void hash::remove_pessoa_hash(int codigo){
+    /*
+    *Dei uma mechida mas nao resolveu tem algo de errado nao é o iterator
+    */
+   /* list<pessoa>::iterator it;
+    for(it=lista[calcular_indice_hash(codigo)].begin();it!=lista[calcular_indice_hash(codigo)].end();it++){
+        if(it = it->get_codigo()){
             cout<< "Registro Deletado";
             lista[i].clear();
-
         }
-    }
+    }*/
 }
 
 //consulta o hash pelo codigo
 void hash::consulta_hash(int codigo, int indice){
-    for(int i = lista[indice].begin; i < lista[indice].end; i++ ){
+    /*for(int i = lista[indice].begin; i < lista[indice].end; i++ ){
         if(i = codigo){
             cout<< "Resultado da consulta:";
             imprimir_pessoa();
-
         }
-    }
+    }*/
 }
 
 //exibi no termial oque temos no hash
