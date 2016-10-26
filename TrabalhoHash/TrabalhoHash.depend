@@ -24,7 +24,7 @@
 	<stdlib.h>
 	<stdio.h>
 
-1477522941 source:c:\users\victor\documents\github\trabalhohashing\trabalhohash\main.cpp
+1477524815 source:c:\users\victor\documents\github\trabalhohashing\trabalhohash\main.cpp
 	<iostream>
 	"func_menu.h"
 	"func_pessoa.h"
@@ -38,7 +38,7 @@
 1477522629 c:\users\victor\documents\github\trabalhohashing\trabalhohash\func_pessoa.h
 	<iostream>
 
-1477524344 c:\users\victor\documents\github\trabalhohashing\trabalhohash\func_hash.h
+1477525644 c:\users\victor\documents\github\trabalhohashing\trabalhohash\func_hash.h
 	<iostream>
 	<list>
 

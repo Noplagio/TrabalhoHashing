@@ -45,16 +45,19 @@ void hash::insere_pessoa_hash(pessoa p){
 
 //remove pessoa do hash
 void hash::remove_pessoa_hash(int codigo){
-    /*
-    *Dei uma mechida mas nao resolveu tem algo de errado nao é o iterator
-    */
-   /* list<pessoa>::iterator it;
-    for(it=lista[calcular_indice_hash(codigo)].begin();it!=lista[calcular_indice_hash(codigo)].end();it++){
-        if(it = it->get_codigo()){
-            cout<< "Registro Deletado";
-            lista[i].clear();
+    list<pessoa>::iterator it;
+    int indice = calcular_indice_hash(codigo);
+    for(it=lista[indice].begin();it!=lista[indice].end();it++){
+        //Procura o codigo do usuario num hashing especifico e o deleta.
+        if(it->get_codigo() ==codigo){
+            cout<< "Registro Deletado.";
+            lista[indice].erase(it);
+            break;
         }
-    }*/
+        else{
+            cout<< "Registro Inexistente.";
+        }
+    }
 }
 
 //consulta o hash pelo codigo
@@ -68,7 +71,7 @@ void hash::consulta_hash(int codigo){
             it->imprimir_pessoa();
         }
         else{
-            cout<< "Registro Inexistente."
+            cout<< "Registro Inexistente.";
         }
     }
 }
