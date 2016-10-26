@@ -28,6 +28,10 @@ void listar_hash(){
     h.imprimi_hash();
 }
 
+void remover_hash(){
+    h.~hash();
+}
+
 void buscar_codigo(){
     int codigo;
 
@@ -79,7 +83,7 @@ void insere_pessoa(){
                     insere_pessoa();
                     op = menu_principal();
                     //op = menu_principal(); Edu eu to removendo isso nos outros case pq nao a nescessidade pois esta num while ok.
-                    //colocquei de novo pq se tirar ele entra em loop infinito e fica lendo sempre a mesma função e nao cvolta pro menu
+                    //colocquei de novo pq se tirar ele entra em loop infinito e fica lendo sempre a mesma função e nao volta pro menu
                     break;
                 case 2:
                     remover_pessoa();
@@ -93,7 +97,15 @@ void insere_pessoa(){
                     listar_hash();
                     op = menu_principal();
                     break;
-                case 6:
+                case 5:
+                    remover_hash();
+                    op = menu_principal();
+                    break;
+                case 6:// so coloquei o case nao fiz mais nada
+
+                    op = menu_principal();
+                    break;
+                case 7:
                     salvar_arquivo();
                     op = menu_principal();
                 default :

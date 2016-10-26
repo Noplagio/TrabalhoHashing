@@ -26,6 +26,7 @@ hash::hash(){
 
 //destrutor
 hash::~hash(){
+    cout<< "Arquivo Deletado.";
     for(int i=0; i < TAM; i++){
         lista[i].clear();
     }
