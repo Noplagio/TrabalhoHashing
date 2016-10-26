@@ -15,8 +15,14 @@
 #include "func_arquivo.h"
 
 //variaveis globais para acesso as outras classes
+func_arquivo a;
 pessoa p;
 hash h;
+
+//Função que salva chama par asalvar dados
+void salvar_arquivo(){
+    a.cria_arquivo();
+}
 
 void listar_hash(){
     h.imprimi_hash();
@@ -88,6 +94,9 @@ void insere_pessoa(){
                     listar_hash();
                     op = menu_principal();
                     break;
+                case 6:
+                    salvar_arquivo();
+                    op = menu_principal();
                 default :
                     cout << "Opção inválida, Finalizando programa!!"<<endl;
                     op = 0;
