@@ -44,13 +44,25 @@ void hash::insere_pessoa_hash(pessoa p){
 }
 
 //remove pessoa do hash
-void hash::remove_pessoa_hash(){
+void hash::remove_pessoa_hash(int codigo, int indice){
+    for(int i = lista[indice].begin; i < lista[indice].end; i++ ){
+        if(i = codigo){
+            cout<< "Registro Deletado";
+            lista[i].clear();
 
+        }
+    }
 }
 
 //consulta o hash pelo codigo
-void hash::consulta_hash(){
+void hash::consulta_hash(int codigo, int indice){
+    for(int i = lista[indice].begin; i < lista[indice].end; i++ ){
+        if(i = codigo){
+            cout<< "Resultado da consulta:";
+            imprimir_pessoa();
 
+        }
+    }
 }
 
 //exibi no termial oque temos no hash

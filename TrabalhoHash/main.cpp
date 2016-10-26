@@ -28,6 +28,8 @@ void buscar_codigo(){
     ler_busca_codigo();
     cout << ">>";
     cin >> codigo;
+    calcular_indice_hash(codigo);
+    consulta_hash(codigo, indice);
 }
 
 void remover_pessoa(){
@@ -36,6 +38,7 @@ void remover_pessoa(){
     ler_remove_pessoa();
     cout <<">>";
     cin >> codigo;
+    calcular_indice_hash(codigo);
 }
 
 
@@ -69,19 +72,19 @@ void insere_pessoa(){
             switch(op){
                 case 1:
                     insere_pessoa();
-                    op = menu_principal();
+                    //op = menu_principal(); Edu eu to removendo isso nos outros case pq nao a nescessidade pois esta num while ok.
                     break;
                 case 2:
                     remover_pessoa();
-                    op = menu_principal();
+
                     break;
                 case 3:
                     buscar_codigo();
-                    op = menu_principal();
+
                     break;
                 case 4:
                     listar_hash();
-                    op = menu_principal();
+
                     break;
                 default :
                     cout << "Opção inválida, Finalizando programa!!"<<endl;
