@@ -34,8 +34,7 @@ void buscar_codigo(){
     ler_busca_codigo();
     cout << ">>";
     cin >> codigo;
-    //calcular_indice_hash(codigo);
-    //consulta_hash(codigo, indice);
+    h.consulta_hash(codigo);
 }
 
 void remover_pessoa(){
@@ -44,7 +43,7 @@ void remover_pessoa(){
     ler_remove_pessoa();
     cout <<">>";
     cin >> codigo;
- //   calcular_indice_hash(codigo);
+    h.remove_pessoa_hash(codigo);
 }
 
 
