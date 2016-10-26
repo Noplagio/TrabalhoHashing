@@ -39,9 +39,9 @@ func_arquivo::func_arquivo(){
 void func_arquivo::cria_arquivo(){
    ofstream arquivo;
 
-    for(int i=0;i<TAM;i++){
+    for(int i=0;i<10;i++){
         char nome[2];
-        sprintf(nome, "Teste-%d.txt", i);
+        sprintf(nome, "Data-%0 d.txt", i);
         arquivo.open(nome, ios::app);
         arquivo.close();
     }
