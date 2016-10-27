@@ -42,7 +42,7 @@ func_arquivo::func_arquivo(){
 void func_arquivo::cria_arquivo(){
    ofstream arquivo;
     for(int i=0;i<TAM;i++){
-        char nome[TAM];
+        char nome[FILENAME_MAX];//usado para que a função consiga escrever todos os nomes dentro do char se nao ele nao comporta
         sprintf(nome, "Data-%d.txt",i);
         arquivo.open(nome, ios::app);
         arquivo.close();
