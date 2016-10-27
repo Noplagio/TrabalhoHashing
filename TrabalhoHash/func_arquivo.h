@@ -58,4 +58,19 @@ void func_arquivo::limpar_arquivo(){
 //função capaz de iniciar o programa verificando a existenci de data
 void func_arquivo::inicia_data(){
 
+    int codigo;
+    int idade;
+    string nome;
+
+    //Abriremos arquivo por arquivo e verificamos os dados
+    arq.open("Data-0.txt", ios::in);
+    while(!arq.eof()){
+        arquivo >> codigo >> idade >> nome;
+        p.set_codigo(codigo);
+        p.set_idade(idade);
+        p.set_nome(nome)
+        h.insere_pessoa_hash(h.calcular_indice_hash(codigo));
+        cout<<"Arquivos carregados com exito no sistema!!";
+    }
+
 }
