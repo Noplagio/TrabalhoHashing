@@ -19,6 +19,11 @@ func_arquivo a;
 pessoa p;
 hash h;
 
+void inicia_dados(){
+    a.inicia_data();
+    cout<<"Arquivos carregados com exito no sistema!!";
+}
+
 void apaga_arquivo(){
     a.limpar_arquivo();
 }
@@ -80,6 +85,7 @@ void insere_pessoa(){
  int main(){
 
      setlocale(LC_ALL, "Portuguese");//passando codigo para portugues
+    inicia_dados();
 
     int op = menu_principal();
 

@@ -12,6 +12,7 @@
 #include <map>
 #include <sstream>
 
+
 using namespace std;
 
 class func_arquivo{
@@ -38,7 +39,7 @@ void func_arquivo::cria_arquivo(int codigo, int idade, string nome, int indice){
         arquivo.open(nome_arquivo, ios::app);
 
         if(indice == i){
-            arquivo << "Codigo:\t" << codigo << "\tIdade:\t" << idade << "\tNome:\t" << nome << "\n";
+            arquivo << codigo << "\t" << idade << "\t" << nome << "\n";
         }
         arquivo.close();
     }
@@ -57,20 +58,23 @@ void func_arquivo::limpar_arquivo(){
 
 //função capaz de iniciar o programa verificando a existenci de data
 void func_arquivo::inicia_data(){
-
+    pessoa p;
     int codigo;
     int idade;
     string nome;
+    ifstream arquivo;
 
     //Abriremos arquivo por arquivo e verificamos os dados
-    arq.open("Data-0.txt", ios::in);
-    while(!arq.eof()){
+    arquivo.open("Data-0.txt", ios::in);
+    while(!arquivo.eof()){
         arquivo >> codigo >> idade >> nome;
         p.set_codigo(codigo);
         p.set_idade(idade);
-        p.set_nome(nome)
-        h.insere_pessoa_hash(h.calcular_indice_hash(codigo));
-        cout<<"Arquivos carregados com exito no sistema!!";
-    }
+        p.set_nome(nome);
+        h.insere_pessoa_hash(p);//problema para acessar a função la do hash e conseguir inserir dados na lista
 
+    }
+        cout<< codigo;
+        cout<< nome;
+        cout<< idade;
 }
