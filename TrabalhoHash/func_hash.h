@@ -26,7 +26,7 @@ hash::hash(){
 
 //destrutor
 hash::~hash(){
-    cout<< "Arquivo Deletado.";
+    cout<< "\nTodas as pessoas cadastradas foram deletadas!!\n";
     for(int i=0; i < TAM; i++){
         lista[i].clear();
     }
@@ -51,12 +51,12 @@ void hash::remove_pessoa_hash(int codigo){
     for(it=lista[indice].begin();it!=lista[indice].end();it++){
         //Procura o codigo do usuario num hashing especifico e o deleta.
         if(it->get_codigo() ==codigo){
-            cout<< "Registro Deletado.";
+            cout<< "Pessoa Deletada com sucesso!!.";
             lista[indice].erase(it);
             break;
         }
         else{
-            cout<< "Registro Inexistente.";
+            cout<< "\nEste código de pessoa nao existe!! Tente novamente!!\n";
         }
     }
 }

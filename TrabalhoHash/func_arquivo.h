@@ -18,19 +18,10 @@ class func_arquivo{
     public:
         func_arquivo();
         void cria_arquivo();
-        void apaga_arquivo();
+        void limpar_arquivo();
         void inicia_data();
-        string converte_string(int valor);
 };
 
-//funçaõ que convertte int em string para nomear txt
-string func_arquivo::converte_string(int codigo){
-    stringstream convert;
-     		convert << codigo << endl;
-     		string cod = convert.str();
-            std::string nome_arquivo = "Data_" + cod;
-            return  nome_arquivo;
-}
 
 //construtor
 func_arquivo::func_arquivo(){
@@ -43,14 +34,14 @@ void func_arquivo::cria_arquivo(){
    ofstream arquivo;
     for(int i=0;i<TAM;i++){
         char nome[FILENAME_MAX];//usado para que a função consiga escrever todos os nomes dentro do char se nao ele nao comporta
-        sprintf(nome, "Data-%d.txt",i);
+        sprintf(nome, "Data-%d.txt",i);//função que realiza conversao de inteiros para char
         arquivo.open(nome, ios::app);
         arquivo.close();
     }
 }
 
 //função capaz de apagar os dados e limpar o arquivo
-void func_arquivo::apaga_arquivo(){
+void func_arquivo::limpar_arquivo(){
 
 }
 
