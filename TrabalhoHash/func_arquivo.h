@@ -17,7 +17,7 @@ using namespace std;
 class func_arquivo{
     public:
         func_arquivo();
-        void cria_arquivo();
+        void cria_arquivo(int codigo,int idade, string nome, int indice);
         void limpar_arquivo();
         void inicia_data();
 };
@@ -30,19 +30,29 @@ func_arquivo::func_arquivo(){
 }
 
 //função capaz de criar o arquivo e escrever dentro
-void func_arquivo::cria_arquivo(){
+void func_arquivo::cria_arquivo(int codigo, int idade, string nome, int indice){
    ofstream arquivo;
     for(int i=0;i<TAM;i++){
-        char nome[FILENAME_MAX];//usado para que a função consiga escrever todos os nomes dentro do char se nao ele nao comporta
-        sprintf(nome, "Data-%d.txt",i);//função que realiza conversao de inteiros para char
-        arquivo.open(nome, ios::app);
+        char nome_arquivo[FILENAME_MAX];//usado para que a função consiga escrever todos os nomes dentro do char se nao ele nao comporta
+        sprintf(nome_arquivo, "Data-%d.txt",i);//função que realiza conversao de inteiros para char
+        arquivo.open(nome_arquivo, ios::app);
+
+        if(indice == i){
+            arquivo << "Codigo:\t" << codigo << "\tIdade:\t" << idade << "\tNome:\t" << nome << "\n";
+        }
         arquivo.close();
     }
 }
 
 //função capaz de apagar os dados e limpar o arquivo
 void func_arquivo::limpar_arquivo(){
-
+    ofstream arquivo;
+    for(int i=0;i<TAM;i++){
+        char nome_arquivo[FILENAME_MAX];//usado para que a função consiga escrever todos os nomes dentro do char se nao ele nao comporta
+        sprintf(nome_arquivo, "Data-%d.txt",i);//função que realiza conversao de inteiros para char
+        arquivo.open(nome_arquivo, ios::trunc);
+        arquivo.close();
+    }
 }
 
 //função capaz de iniciar o programa verificando a existenci de data

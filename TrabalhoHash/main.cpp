@@ -19,9 +19,15 @@ func_arquivo a;
 pessoa p;
 hash h;
 
+void apaga_arquivo(){
+    a.limpar_arquivo();
+}
+
 //Função que salva chama par asalvar dados
 void salvar_arquivo(){
-    a.cria_arquivo();
+    int indice = h.calcular_indice_hash(p.get_codigo());
+    a.cria_arquivo(p.get_codigo(),p.get_idade(), p.get_nome(), indice);
+    cout <<"\nDados Salvos com sucesso!!\n";
 }
 
 void listar_hash(){
@@ -108,6 +114,11 @@ void insere_pessoa(){
                 case 7:
                     salvar_arquivo();
                     op = menu_principal();
+                    break;
+                case 8:
+                    apaga_arquivo();
+                    op = menu_principal();
+                    break;
                 default :
                     cout << "Opção inválida, Finalizando programa!!"<<endl;
                     op = 0;
