@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1477504343 source:c:\users\eduardo\desktop\git\trabalhohashing\trabalhohash\main.cpp
+1477561945 source:c:\users\eduardo\desktop\git\trabalhohashing\trabalhohash\main.cpp
 	<iostream>
 	"func_menu.h"
 	"func_pessoa.h"
@@ -13,16 +13,17 @@
 1477421084 c:\users\eduardo\desktop\git\trabalhohashing\trabalhohash\func_pessoa.h
 	<iostream>
 
-1477477067 c:\users\eduardo\desktop\git\trabalhohashing\trabalhohash\func_hash.h
+1477560918 c:\users\eduardo\desktop\git\trabalhohashing\trabalhohash\func_hash.h
 	<iostream>
 	<list>
 
-1477507994 c:\users\eduardo\desktop\git\trabalhohashing\trabalhohash\func_arquivo.h
+1477567144 c:\users\eduardo\desktop\git\trabalhohashing\trabalhohash\func_arquivo.h
 	<iostream>
 	<fstream>
+	<string.h>
+	<cstdlib>
+	<map>
 	<sstream>
-	<stdlib.h>
-	<stdio.h>
 
 1477524815 source:c:\users\victor\documents\github\trabalhohashing\trabalhohash\main.cpp
 	<iostream>

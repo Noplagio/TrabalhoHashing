@@ -7,9 +7,10 @@
 
 #include <iostream>
 #include <fstream>
+#include <string.h>
+#include <cstdlib>
+#include <map>
 #include <sstream>
-#include <stdlib.h>
-#include <stdio.h>
 
 using namespace std;
 
@@ -19,14 +20,16 @@ class func_arquivo{
         void cria_arquivo();
         void apaga_arquivo();
         void inicia_data();
-        char converte_string(int valor);
+        string converte_string(int valor);
 };
 
 //funçaõ que convertte int em string para nomear txt
-char func_arquivo::converte_string(int valor){
-    char texto[TAM];
-    itoa(valor,texto,10);
-    return texto[TAM];
+string func_arquivo::converte_string(int codigo){
+    stringstream convert;
+     		convert << codigo << endl;
+     		string cod = convert.str();
+            std::string nome_arquivo = "Data_" + cod;
+            return  nome_arquivo;
 }
 
 //construtor
@@ -38,10 +41,9 @@ func_arquivo::func_arquivo(){
 //função capaz de criar o arquivo e escrever dentro
 void func_arquivo::cria_arquivo(){
    ofstream arquivo;
-
-    for(int i=0;i<10;i++){
-        char nome[2];
-        sprintf(nome, "Data-%0 d.txt", i);
+    for(int i=0;i<TAM;i++){
+        char nome[TAM];
+        sprintf(nome, "Data-%d.txt",i);
         arquivo.open(nome, ios::app);
         arquivo.close();
     }
