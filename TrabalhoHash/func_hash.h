@@ -1,9 +1,13 @@
 #include <iostream>
 #include <list>
 
+
 #define TAM 4
 
 using namespace std;
+
+pessoa pe;
+
 
 class hash{
     private:
@@ -16,6 +20,7 @@ class hash{
         void remove_pessoa_hash(int codigo);
         void consulta_hash(int codigo);
         void imprimi_hash();
+        void salvar();
 };
 
 
@@ -86,5 +91,10 @@ void hash::imprimi_hash(){
             it->imprimir_pessoa();
         }
     }
+}
+
+void hash::salvar(){
+    int indice = calcular_indice_hash(pe.get_codigo());
+    as.cria_arquivo(pe.get_codigo(),pe.get_idade(), pe.get_nome(), indice);
 }
 

@@ -71,5 +71,5 @@ string pessoa::get_nome(){
 //imprime tabela hash pesso por pessoa
 void pessoa::imprimir_pessoa(){
     cout<<"\n";
-    cout<<"\tcodigo:\t"<<codigo<<"\tIdade:\t"<<idade<<"\tNome:\t"<<nome;
+    cout<<"\tcodigo:\t"<<this->codigo<<"\tIdade:\t"<<this->idade<<"\tNome:\t"<<this->nome;
 }

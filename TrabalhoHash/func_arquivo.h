@@ -77,16 +77,14 @@ void func_arquivo::inicia_data(){
             else{
                 while(!arquivo.eof()){
                     arquivo >> codigo >> idade >> nome;
-                    arquivo.close();
+
                     p.set_codigo(codigo);
                     p.set_idade(idade);
                     p.set_nome(nome);
                     h.insere_pessoa_hash(p);
-
                 }
+
             }
-
-
+        arquivo.close();
     }
-
 }
