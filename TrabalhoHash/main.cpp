@@ -7,8 +7,8 @@
 *Local: Unesc - sc
 *Data: 25/10/2016
 */
-
 #include <iostream>
+
 #include "func_menu.h"
 #include "func_pessoa.h"
 #include "func_hash.h"
@@ -16,8 +16,6 @@
 
 //variaveis globais para acesso as outras classes
 func_arquivo a;
-pessoa p;
-hash h;
 
 void inicia_dados(){
     a.inicia_data();
