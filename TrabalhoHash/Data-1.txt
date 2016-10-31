@@ -1,3 +1,1 @@
-1	20	Eduardo
-65	65	amanda
-85	52	emersom
+5	20	asdsa
