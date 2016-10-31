@@ -38,20 +38,15 @@ void func_arquivo::cria_arquivo(){
    ofstream arquivo;
    list<pessoa>::iterator it;
     for(int i=0;i<TAM;i++){
-        for(it=h.lista[h.calcular_indice_hash(p.get_codigo())].begin();it!=h.lista[h.calcular_indice_hash(p.get_codigo())].end();it++){
-        if(p.get_codigo() % 4 == i){
-        char nome_arquivo[FILENAME_MAX];//usado para que a função consiga escrever todos os nomes dentro do char se nao ele nao comporta
-        sprintf(nome_arquivo, "Data-%d.txt",i);//função que realiza conversao de inteiros para char
-        arquivo.open(nome_arquivo, ios::app);
-
-
-        }
-
-                arquivo << p.get_codigo() << "\t" << p.get_idade() << "\t" <<  p.get_nome() << "\n";
-                //cout << it->get_codigo();
-
+        for(it=h.lista[i].begin();it!=h.lista[i].end();it++){
+            if(it->get_codigo() % TAM == i){
+                char nome_arquivo[FILENAME_MAX];//usado para que a função consiga escrever todos os nomes dentro do char se nao ele nao comporta
+                sprintf(nome_arquivo, "Data-%d.txt",i);//função que realiza conversao de inteiros para char
+                arquivo.open(nome_arquivo, ios::app);
+                arquivo << it->get_codigo() << "\t" << it->get_idade() << "\t" <<  it->get_nome() << "\n";
+            }
         arquivo.close();
-    }
+        }
     }
 }
 
