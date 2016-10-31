@@ -10,9 +10,9 @@ pessoa pe;
 
 
 class hash{
-    private:
-        list<pessoa>lista[TAM];
+
     public:
+        list<pessoa>lista[TAM];
         hash();
         ~hash();
         int calcular_indice_hash(int codigo);
@@ -94,7 +94,6 @@ void hash::imprimi_hash(){
 }
 
 void hash::salvar(){
-    int indice = calcular_indice_hash(pe.get_codigo());
-    as.cria_arquivo(pe.get_codigo(),pe.get_idade(), pe.get_nome(), indice);
+    //a.cria_arquivo();
 }
 

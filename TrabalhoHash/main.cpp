@@ -8,7 +8,6 @@
 *Data: 25/10/2016
 */
 #include <iostream>
-
 #include "func_menu.h"
 #include "func_pessoa.h"
 #include "func_hash.h"
@@ -28,7 +27,8 @@ void apaga_arquivo(){
 
 //Função que salva chama par asalvar dados
 void salvar_arquivo(){
-    h.salvar();
+
+    a.cria_arquivo();
     cout <<"\nDados Salvos com sucesso!!\n";
 }
 
@@ -82,7 +82,7 @@ void insere_pessoa(){
  int main(){
 
      setlocale(LC_ALL, "Portuguese");//passando codigo para portugues
-    inicia_dados();
+    //inicia_dados();
 
     int op = menu_principal();
 
