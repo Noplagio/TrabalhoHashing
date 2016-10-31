@@ -110,15 +110,11 @@ void insere_pessoa(){
                     remover_hash();
                     op = menu_principal();
                     break;
-                case 6:// so coloquei o case nao fiz mais nada
-
-                    op = menu_principal();
-                    break;
-                case 7:
+                case 6:
                     salvar_arquivo();
                     op = menu_principal();
                     break;
-                case 8:
+                case 7:
                     apaga_arquivo();
                     op = menu_principal();
                     break;

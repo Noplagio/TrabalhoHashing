@@ -25,7 +25,7 @@ int menu_principal(){
 
     int op = -1;
     cout<< "\n\n-------Menu Principal---------" <<endl;
-    cout<< "\n1-Inserir pessoa\n2-Remover pessoa\n3-Consultar pelo código\n4-Listar todas\n5-Apagar hash\n6-Inserir aleatoriamente\n7-Salvar dados\n8-Limpar arquivos\n0-Sair"<< endl;
+    cout<< "\n1-Inserir pessoa\n2-Remover pessoa\n3-Consultar pelo código\n4-Listar todas\n5-Apagar hash\n6-Salvar dados\n7-Limpar arquivos\n0-Sair"<< endl;
     cout << "\nInforme a opção desejada:"<<endl;
     cin >> op;
     return op;
